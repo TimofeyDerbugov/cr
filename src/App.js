@@ -75,12 +75,7 @@ const initialPrices = {
 };
 
 const employees = [
-  { id: 1, name: "Иван Петров", role: "менеджер", phone: "+7 916 100-00-01", active: true },
-  { id: 2, name: "Мария Семёнова", role: "менеджер", phone: "+7 916 100-00-02", active: true },
-  { id: 3, name: "Олег Стрельников", role: "монтажник", phone: "+7 916 100-00-03", active: true },
-  { id: 4, name: "Виктор Зайцев", role: "монтажник", phone: "+7 916 100-00-04", active: true },
-  { id: 5, name: "Татьяна Крылова", role: "замерщик", phone: "+7 916 100-00-05", active: true },
-  { id: 6, name: "Алина Борисова", role: "бухгалтер", phone: "+7 916 100-00-06", active: false },
+  { id: 1, name: "", role: "менеджер", phone: "", active: true },
 ];
 
 const ROLE_COLORS = { менеджер: INFO, монтажник: ORANGE, замерщик: SUCCESS, бухгалтер: WARN, администратор: "#A855F7" };
