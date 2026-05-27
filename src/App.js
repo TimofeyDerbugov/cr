@@ -804,7 +804,6 @@ function AIAssistant({ orders, finances, warehouse, prices }) {
 
   return (
     <div>
-      <SectionTitle>AI Помощник 🤖</SectionTitle>
       <Card style={{ marginBottom: 12, minHeight: 400, display: "flex", flexDirection: "column" }}>
         <div style={{ flex: 1, overflowY: "auto", maxHeight: 350, paddingRight: 4 }}>
           {messages.map((m, i) => (
@@ -841,7 +840,6 @@ const NAV = [
   { id: "finances", label: "Финансы", icon: "💰" },
   { id: "pricelist", label: "Прайс", icon: "🛒" },
   { id: "employees", label: "Сотрудники", icon: "👥" },
-  { id: "ai", label: "AI", icon: "🤖" },
 ];
 
 export default function App() {
