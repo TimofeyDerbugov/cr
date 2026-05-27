@@ -15,32 +15,13 @@ const db = {
   },
 };
 
-// Инициализация начальных данных
+// Инициализация пустой БД
 function initDB() {
   if (!localStorage.getItem("zaborych_init")) {
-    db.set("orders", [
-      { id: 1, client: "Алексей Морозов", phone: "+7 916 123-45-67", address: "МО, Красногорск, ул. Ленина 12", status: "монтаж", fenceType: "3D сетка 1.8", perimeter: 80, gates: "Стандарт", wicket: "С замком", demolition: true, delivery: 25, total: 124500, created: "2025-04-22", manager: "Иван П.", note: "Участок с уклоном, нужна доп. выемка" },
-      { id: 2, client: "ООО ДачСтрой", phone: "+7 495 000-11-22", address: "МО, Истра, коттедж. пос. Березки", status: "расчет", fenceType: "Профлист", perimeter: 220, gates: "Премиум", wicket: "С замком", demolition: false, delivery: 55, total: 298000, created: "2025-04-28", manager: "Мария С.", note: "" },
-      { id: 3, client: "Светлана Кузнецова", phone: "+7 926 555-00-11", address: "МО, Дмитров, СНТ Ромашка", status: "завершено", fenceType: "Штакетник 1.85", perimeter: 56, gates: "Нет", wicket: "Эконом", demolition: false, delivery: 40, total: 67800, created: "2025-04-10", manager: "Иван П.", note: "" },
-      { id: 4, client: "Дмитрий Власов", phone: "+7 909 333-22-11", address: "МО, Пушкино, ул. Садовая 7", status: "замер", fenceType: "3D сетка 1.5", perimeter: 45, gates: "Эконом", wicket: "Нет", demolition: false, delivery: 30, total: 52300, created: "2025-05-01", manager: "Мария С.", note: "Клиент хочет ворота на пульт" },
-    ]);
-    db.set("finances", [
-      { id: 1, type: "доход", category: "Оплата заказа", desc: "Кузнецова С.", amount: 67800, date: "2025-04-25" },
-      { id: 2, type: "расход", category: "Материалы", desc: "Закупка трубы", amount: 24000, date: "2025-04-20" },
-      { id: 3, type: "расход", category: "Зарплата", desc: "Монтажники апрель", amount: 85000, date: "2025-04-30" },
-      { id: 4, type: "доход", category: "Аванс", desc: "Морозов А.", amount: 60000, date: "2025-05-02" },
-      { id: 5, type: "расход", category: "Доставка", desc: "ТК Деловые Линии", amount: 8500, date: "2025-05-03" },
-    ]);
-    db.set("warehouse", [
-      { id: 1, name: "3D сетка 1.8", qty: 450, unit: "м", minQty: 100, lastIn: "2025-04-10" },
-      { id: 2, name: "Профлист", qty: 280, unit: "м", minQty: 80, lastIn: "2025-04-15" },
-      { id: 3, name: "Труба 60×40", qty: 1200, unit: "м", minQty: 200, lastIn: "2025-04-08" },
-      { id: 4, name: "Труба несущая 60×60", qty: 85, unit: "шт", minQty: 30, lastIn: "2025-04-12" },
-      { id: 5, name: "Щебень", qty: 12, unit: "м³", minQty: 5, lastIn: "2025-04-18" },
-      { id: 6, name: "Саморезы (уп.)", qty: 24, unit: "уп", minQty: 10, lastIn: "2025-04-05" },
-      { id: 7, name: "Штакетник 1.75", qty: 60, unit: "м", minQty: 50, lastIn: "2025-04-20" },
-    ]);
-    db.set("nextId", { orders: 5, finances: 6, warehouse: 8 });
+    db.set("orders", []);
+    db.set("finances", []);
+    db.set("warehouse", []);
+    db.set("nextId", { orders: 1, finances: 1, warehouse: 1 });
     localStorage.setItem("zaborych_init", "1");
   }
 }
