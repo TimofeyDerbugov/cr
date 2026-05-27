@@ -278,7 +278,8 @@ function OrderForm({ order, onSave, onClose, prices }) {
   const [est, setEst] = useState(null);
   useEffect(() => {
     if (form.perimeter > 0) setEst(calcEstimate({ ...form, perimeter: Number(form.perimeter) }, prices));
-  }, [form.perimeter, form.fenceType, form.gates, form.wicket, form.demolition, form.delivery]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [form.perimeter, form.fenceType, form.gates, form.wicket, form.demolition, form.delivery, prices]);
   const set = (k, v) => setForm(p => ({ ...p, [k]: v }));
 
   return (
